@@ -1,0 +1,54 @@
+# C++ objects and libs
+
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+
+# Qt-es
+
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.moc
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+Makefile*
+*-build-*
+*_build_*
+build-*
+build_*
+*install*
+
+# QtCreator
+
+*.autosave
+
+#QtCtreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
+
+# Python 
+*.pyc
+
+# ignore CMakeLists.txt.user
+CMakeLists.txt.user
+
+# my bash/bat generating scripts
+*generate*.sh
+*generate*.bat
+
+# Mac sheet
+.DS_Store
+
+
+# Catkin WS
+build/
+devel/
