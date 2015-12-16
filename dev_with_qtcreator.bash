@@ -2,7 +2,7 @@
 
 echo "---------------------------------------------------------------"
 echo "---- Script to start Qt Creator to work with a ros package ----"
-echo "---- Usage : $ dev_with_qtcreator package_folder           ----"
+echo "---- Usage : $ dev_with_qtcreator package_folder_path      ----"
 echo "---------------------------------------------------------------"
 
 if [ -z "$1" ]; then
@@ -10,16 +10,25 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-source /opt/ros/jade/setup.bash
+# setup ros environment
+if [ -d /opt/ros/jade ]; then 
+	source /opt/ros/jade/setup.bash
+fi
 
-echo "Package folder : " $1 
+if [ -d /opt/ros/indigo ]; then 
+	source /opt/ros/indigo/setup.bash
+fi
+
+
+
+echo "Package folder path : " $1 
 
 if [ -d $1 ]
 then
     echo "Start qtcreator $1/CMakeLists.txt"
     qtcreator $1/CMakeLists.txt
 else	
-    echo "Error! Package folder is not found !"
+    echo "Error! Package folder path is not found !"
     exit 1
 fi 
 

@@ -48,6 +48,8 @@ CMakeLists.txt.user
 # Mac sheet
 .DS_Store
 
+# backup files
+*~
 
 # Catkin WS
 build/
