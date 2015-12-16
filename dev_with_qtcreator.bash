@@ -14,10 +14,10 @@ source /opt/ros/jade/setup.bash
 
 echo "Package folder : " $1 
 
-if [ -d src/$1 ]
+if [ -d $1 ]
 then
-    echo "Start qtcreator src/$1/CMakeLists.txt"
-    qtcreator src/$1/CMakeLists.txt
+    echo "Start qtcreator $1/CMakeLists.txt"
+    qtcreator $1/CMakeLists.txt
 else	
     echo "Error! Package folder is not found !"
     exit 1
