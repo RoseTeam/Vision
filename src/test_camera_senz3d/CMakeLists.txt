@@ -113,15 +113,15 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-# include_directories(include)
+include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
-# add_library(test_camera_senz3d
+#add_library(test_camera_senz3d
 #   src/${PROJECT_NAME}/test_camera_senz3d.cpp
-# )
+#)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -129,16 +129,23 @@ include_directories(
 # add_dependencies(test_camera_senz3d ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(test_camera_senz3d_node src/test_camera_senz3d_node.cpp)
+# fetch header files
+file(GLOB_RECURSE INC_FILES "include/${PROJECT_NAME}/*.h")
+file(GLOB_RECURSE SRC_FILES "src/*.cpp")
+
+add_executable(test_camera_senz3d_node
+    ${INC_FILES}
+    ${SRC_FILES}
+)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(test_camera_senz3d_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(test_camera_senz3d_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(test_camera_senz3d_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(test_camera_senz3d_node
+   ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
