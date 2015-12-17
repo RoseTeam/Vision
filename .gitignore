@@ -54,3 +54,8 @@ CMakeLists.txt.user
 # Catkin WS
 build/
 devel/
+
+# ignore ROS bag files
+*.bag
+
+
