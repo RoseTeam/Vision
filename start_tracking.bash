@@ -12,7 +12,8 @@ if [ -z "$1" ]; then
     source devel/setup.bash
 
     echo "- Launch camera and ar-track-alvar"
-    roslaunch launch/softkinetic_senz3D_camera.launch launch/ar_track_indiv_no_kinect.launch
+    cd launch
+    roslaunch softkinetic_senz3D_camera.launch ar_track_indiv_no_kinect.launch marker_navigation.launch
 
 elif [ "$1" == "help" ]; then
 

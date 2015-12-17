@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+-->
+<launch>
+
+	<node name="marker_navigation" 
+		pkg="marker_navigation" 
+		type="marker_navigation_node" 
+		respawn="false" 
+		output="screen">
+		
+		
+	</node>
+
+</launch>
