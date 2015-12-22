@@ -1,14 +1,14 @@
-# Catkin workspace with CV test packages 
+## Catkin workspace with CV test packages 
 
-Workspace source contains nodes :
+Workspace source folder contains the following pacakges :
 
-### [test_package](https://github.com/vfdev-5/ros_test_package) 
+#### - [test_package](https://github.com/vfdev-5/ros_test_package) 
 Package contains two tutorial nodes (talker & listener) and a marker detection node (code taken from ar_track_alvar individual marker detection node)
 
-### test_camera_senz3d 
+#### - test_camera_senz3d 
 Package contains a node to display and broadcast rgb and depth images with opencv highgui windows
 
-### [softkinetic_camera](https://github.com/vfdev-5/softkinetic) 
+#### - [softkinetic_camera](https://github.com/vfdev-5/softkinetic) 
 It is a fork of ROS driver package for an interactive gesture camera [softkinetic](https://github.com/ipa320/softkinetic). This node create useful topics : rgb, depth, camera_info, etc
 
 ```
@@ -34,5 +34,21 @@ Services:
  * /softkinetic_camera/get_loggers
 ```
  
-### marker_navigation
+#### - marker_navigation
 Test package to work with data from ar_track_alvar and broadcast location information with respect to markers 
+
+
+### Launch files :
+
+ - softkinetic_senz3D_camera.launch starts Creative Senz3D softkinetic_camera node
+ - ar_track_indiv.launch
+
+
+### Other files :
+
+ - [Alvar_markers](https://github.com/vfdev-5/Catkin_ws_cv_tests/tree/master/Alvar_markers) contains png marker images
+ - dev_with_qtcreator.bash, script to start package development with qt creator
+ - start_tracking.bash starts camera, ar_tracking and marker_navigation launch files
+
+
+
