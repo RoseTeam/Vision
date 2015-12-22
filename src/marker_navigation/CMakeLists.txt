@@ -7,6 +7,7 @@ project(marker_navigation)
 find_package(catkin REQUIRED COMPONENTS
     roscpp
     std_msgs
+    ar_track_alvar
 )
 
 ## System dependencies are found with CMake's conventions

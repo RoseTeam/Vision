@@ -9,6 +9,10 @@
 		respawn="false" 
 		output="screen">
 		
+		<param name="pose_markers" value="/ar_pose_marker"/>		
+
+
+		<param name="verbose" type="bool" value="true"/>
 		
 	</node>
 
