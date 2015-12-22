@@ -33,6 +33,12 @@ Services:
  * /softkinetic_camera/set_logger_level
  * /softkinetic_camera/get_loggers
 ```
+
+Fork code adds :
+ - Verbose parameters added
+ - enable/disable audio, depth nodes
+ - enable accelerometer data
+
  
 #### - marker_navigation
 Test package to work with data from ar_track_alvar and broadcast location information with respect to markers 
