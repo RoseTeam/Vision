@@ -6,7 +6,9 @@
     <param name="camera_link" type="string" value="/softkinetic_camera_link" />
     <param name="rgb_optical_frame" type="string" value="/softkinetic_camera_rgb_optical_frame" />
     <param name="depth_optical_frame" type="string" value="/softkinetic_camera_depth_optical_frame" />
-    <param name="rgb_calibration_file" type="string" value="$(find softkinetic_camera)/resources/senz3d.yaml" />
+
+    <!-- <param name="rgb_calibration_file" type="string" value="$(find softkinetic_camera)/resources/senz3d.yaml.temp" /> -->
+
     <param name="confidence_threshold" type="int" value="50" />
     <param name="use_radius_outlier_filter" type="bool" value="false" />
     <param name="search_radius" type="double" value="0.05" />
@@ -24,8 +26,16 @@
     <param name="color_frame_rate" value="30" /> <!-- 25, 30 -->
     <param name="color_pl_freq" value="60" /> <!-- disabled, 50, 60 (default) -->
    
-   	<param name='verbose' type="bool" value="false"/>
+   	<param name='verbose' type="bool" value="true"/>
    	<param name='verbose_2' type="bool" value="false"/>
+
+	<!-- <param name='output_depth_points' value='depth/points'/>  -->
+	<!-- <param name='output_depth_points' value='depth/points'/> -->
+	<!-- <param name='output_depth_points' value='depth/points'/> -->
+
+	<!-- <param name='output_rgb_image_color' value='image_rect'/> -->
+	<!-- <param name='output_rgb_camera_info' value='camera_info'/> -->
+	<!-- <param name='output_rgb_image_mono' value='rgb/image_mono'/> -->
    
   </node>
 </launch>
