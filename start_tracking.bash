@@ -11,9 +11,9 @@ if [ -z "$1" ]; then
     echo "- Setup development environment"
     source devel/setup.bash
 
-    echo "- Launch camera and ar-track-alvar"
+    echo "- Launch camera, ar-track-alvar and marker_navigation"
     cd launch
-    roslaunch softkinetic_senz3D_camera.launch ar_track_indiv_no_kinect.launch marker_navigation.launch
+    roslaunch marker_navigation.launch ar_track_indiv_no_kinect.launch softkinetic_senz3D_camera.launch
 
 elif [ "$1" == "help" ]; then
 

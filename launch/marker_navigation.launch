@@ -13,6 +13,11 @@
 
 
 		<param name="verbose" type="bool" value="true"/>
+
+		<param name="verbose_input_image_topic" value="/softkinetic_camera/rgb/image_color"/>
+		<param name="verbose_camera_info_topic" value="/softkinetic_camera/rgb/camera_info"/>
+		
+		<param name="verbose_output_image_topic" value="/marker_navigation/verbose_image"/>
 		
 	</node>
 
