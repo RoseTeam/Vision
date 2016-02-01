@@ -8,15 +8,30 @@
 		type="marker_navigation_node" 
 		respawn="false" 
 		output="screen">
+
+		<!--param name="camera_info_topic" value="/softkinetic_camera/rgb/camera_info"/-->
 		
-		<param name="pose_markers" value="/ar_pose_marker"/>		
+		<param name="pose_markers" value="/ar_pose_marker"/>	
+		<param name="pose_correction_z" type="double" value="-0.006"/>	
+		<param name="pose_correction_x" type="double" value="-0.02"/>
+		<param name="pose_correction_y" type="double" value="0"/>
+	
+		<param name="version_2D" type="bool" value="false"/>
+
+
+		<param name="world_markers_count" type="int" value="3"/>
+		<!-- format is id x y theta 
+		     	id of the marker, 
+				x,y marker center coordinates in meters and 
+				signed angle in degrees between marker normal and OX world axis) -->
+		<param name="world_marker_pose_0" value="0 0.657 -0.084 180.0"/>  
+		<param name="world_marker_pose_1" value="1 0.495 0.604 -90.0"/> 
+		<param name="world_marker_pose_2" value="2 0.44 0.655 180.0"/> 
 
 
 		<param name="verbose" type="bool" value="true"/>
-
 		<param name="verbose_input_image_topic" value="/softkinetic_camera/rgb/image_color"/>
 		<param name="verbose_camera_info_topic" value="/softkinetic_camera/rgb/camera_info"/>
-		
 		<param name="verbose_output_image_topic" value="/marker_navigation/verbose_image"/>
 		
 	</node>
