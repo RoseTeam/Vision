@@ -6,13 +6,14 @@
   <arg name="output_rgb_image_color" default="rgb/image_color"/>
   <arg name="output_rgb_camera_info" default="rgb/camera_info"/>
   <arg name="output_rgb_image_mono" default="rgb/image_mono"/>	
+  <arg name="rgb_calibration_file" default="/home/vfdev/Documents/catkin_ws/resources/senz3d.yaml"/>
 
   <node name="softkinetic_camera" pkg="softkinetic_camera" type="softkinetic_bringup_node" args="0" output="screen" >
     <param name="camera_link" type="string" value="/softkinetic_camera_link" />
     <param name="rgb_optical_frame" type="string" value="/softkinetic_camera_rgb_optical_frame" />
     <param name="depth_optical_frame" type="string" value="/softkinetic_camera_depth_optical_frame" />
 
-    <param name="rgb_calibration_file" type="string" value="/home/vfdev/Documents/catkin_ws/resources/custom_senz3d.yaml" />
+    <param name="rgb_calibration_file" type="string" value="$(arg rgb_calibration_file)" />
 
     <param name="confidence_threshold" type="int" value="50" />
     <param name="use_radius_outlier_filter" type="bool" value="false" />
